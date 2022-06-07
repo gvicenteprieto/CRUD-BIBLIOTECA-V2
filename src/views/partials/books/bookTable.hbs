@@ -1,0 +1,51 @@
+<div class="entry">
+  {{#if books}}
+  <table class="container table table-bordered table-hover">
+    
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Descripción</th>
+        <th class="text-center">Operación</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each books}}
+      <tr>
+        <td>{{@index}}</td>
+        <td><strong>{{title}}</strong></td>
+        <td><strong>{{author}}</strong></td>
+        <td>{{description}}</td>
+        <td class="text-center">
+          {{#if done}}
+          <a class="btn btn-success" href="/books/{{_id}}/toggleDone">Agregar</a>
+          {{else}}
+          <a class="btn btn-dark" href="/books/{{_id}}/toggleDone">
+            Undone
+          </a>
+          {{/if}}
+          <a href="/books/{{_id}}/quitar" class="btn btn-danger">
+            Quitar
+          </a>
+          <a href="/books/{{_id}}/editar" class="btn btn-info">
+            Editar
+          </a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+  {{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No hay libros agregados</h1>
+      <img src="/icons/empty.svg" class="w-75" />
+    </div>
+
+  </div>
+  {{/if}}
+</div>

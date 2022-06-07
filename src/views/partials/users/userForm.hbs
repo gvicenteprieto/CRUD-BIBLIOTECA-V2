@@ -1,0 +1,46 @@
+<div class="card card-body p-4 bg-success text-white">
+  <h3>Agregar Usuario</h3>
+  <form action="/users/add" method="post">
+
+    {{! username Input }}
+    <div class="mb-3">
+      <label for="username">Usuario</label>
+      <input
+        id="username"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="username"
+        placeholder="Usuario"
+        autofocus
+      />
+    </div>
+
+    {{! email Input }}
+    <div class="mb-3">
+      <label for="email">email</label>
+      <input
+        id="email"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="email"
+        placeholder="email"
+        autofocus
+      />
+    </div>
+
+    {{! password Input }}
+    <div class="mb-3">
+      <label for="password">password</label>
+      <input
+        id="password"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="password"
+        placeholder="password"
+        autofocus
+      />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Agregar</button>
+  </form>
+</div>

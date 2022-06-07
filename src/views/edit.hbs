@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h1>Actualizar Libro</h1>
+
+          <form action="/edit/{{_id}}" method="post">
+            <div class="mb-3">
+              <input class="form-control" type="text" name="title" placeholder="Título" value="{{title}}" />
+            </div>
+            <div class="mb-3">
+              <input class="form-control" type="text" name="author" placeholder="Autor" value="{{author}}" />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" name="description" rows="3"
+                placeholder="Agregar una descripción">{{task.description}}</textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Actualizar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
